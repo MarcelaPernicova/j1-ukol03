@@ -11,7 +11,7 @@ public class Disk {
         this.kapacita = kapacita;
     }
     public String toString() {
-        return String.format("kapacita: %d bajtů, využité místo %d bajtů", this.kapacita, this.vyuziteMisto);
+        return String.format("kapacita: %d bajtů, využité místo: %d bajtů", this.kapacita, this.vyuziteMisto);
     }
 
     public long getVyuziteMisto() {
