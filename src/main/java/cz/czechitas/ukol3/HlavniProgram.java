@@ -39,6 +39,8 @@ public class HlavniProgram {
 
         marcinPocitac.zapniSe();
         System.out.println(marcinPocitac.toString());
+//        marcinPocitac.zapniSe();
+//        marcinPocitac.vypniSe();
 
 
         }

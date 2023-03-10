@@ -45,7 +45,7 @@ public class Pocitac {
 
     public void vypniSe() {
         if (jeZapnuty) {
-            vypniSe();
+            System.out.println("Počítač se vypnul.");
         } else {
             System.err.println("Počítač je už vypnutý.");
         }
