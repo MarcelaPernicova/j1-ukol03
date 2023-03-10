@@ -41,6 +41,7 @@ public class HlavniProgram {
         System.out.println(marcinPocitac.toString());
 //        marcinPocitac.zapniSe();
 //        marcinPocitac.vypniSe();
+        marcinPocitac.vytvorSouborOVelikosti(422_545_254_457_578L);
 
 
         }

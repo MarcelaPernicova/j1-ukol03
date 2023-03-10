@@ -10,9 +10,6 @@ public class Disk {
     public void setKapacita(long kapacita) {
         this.kapacita = kapacita;
     }
-    public String toString() {
-        return String.format("kapacita: %d bajtů, využité místo: %d bajtů", this.kapacita, this.vyuziteMisto);
-    }
 
     public long getVyuziteMisto() {
         return vyuziteMisto;
@@ -27,7 +24,11 @@ public class Disk {
     private long vyuziteMisto = 125_256_458_230L;
 
 
-
-
-
+    @Override
+    public String toString() {
+        return "Disk{" +
+                "kapacita=" + kapacita +
+                ", vyuziteMisto=" + vyuziteMisto +
+                '}';
+    }
 }

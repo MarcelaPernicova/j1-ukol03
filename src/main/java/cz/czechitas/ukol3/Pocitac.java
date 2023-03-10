@@ -13,27 +13,29 @@ public class Pocitac {
     private Procesor cpu;
 
 
-
     public boolean isJeZapnuty() {
         return this.jeZapnuty;
     }
-    public void setProcesor(Procesor procesor){
-        this.cpu=procesor;
+
+    public void setProcesor(Procesor procesor) {
+        this.cpu = procesor;
     }
 
-    public void setPevnyDisk(Disk disk){
-        this.pevnyDisk=disk;
+    public void setPevnyDisk(Disk disk) {
+        this.pevnyDisk = disk;
     }
-    public void setRam(Pamet pamet){
-        this.ram=pamet;
+
+    public void setRam(Pamet pamet) {
+        this.ram = pamet;
     }
+
     public void zapniSe() {
         if (!jeZapnuty) {
-            if (this.ram==null||this.cpu==null ||this.pevnyDisk==null) {
+            if (this.ram == null || this.cpu == null || this.pevnyDisk == null) {
                 System.err.println("Komponenty počítače se nenačetly.");
                 return;
             }
-            this.jeZapnuty=true;
+            this.jeZapnuty = true;
             System.out.println("Počítač se zapnul.");
         } else {
             System.err.println("Počítač je už zapnutý.");
@@ -41,6 +43,17 @@ public class Pocitac {
 
     }
 
+    public void vytvorSouborOVelikosti(long velikost) {
+        if (jeZapnuty) {
+            this.pevnyDisk.setVyuziteMisto(this.pevnyDisk.getVyuziteMisto() + velikost);
+            if (pevnyDisk.getVyuziteMisto() > pevnyDisk.getKapacita()) {
+                System.err.println("Kapacita na disku je příliš malá.");
+                pevnyDisk.setVyuziteMisto(pevnyDisk.getVyuziteMisto() - velikost);
+
+
+            }
+        }
+    }
 
 
     public void vypniSe() {
