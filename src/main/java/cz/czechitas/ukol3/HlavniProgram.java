@@ -33,11 +33,15 @@ public class HlavniProgram {
 
         marcinPocitac.setPevnyDisk(marcinDisk);
         marcinPocitac.setRam(marcinaPamet);
-        marcinPocitac.setCpu(marcinProcesor);
+        marcinPocitac.setProcesor(marcinProcesor);
 
 
-        System.out.println(marcinPocitac.toString());
+
         marcinPocitac.zapniSe();
+        System.out.println(marcinPocitac.toString());
+
+
+        }
     }
 
-}
+

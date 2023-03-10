@@ -4,11 +4,10 @@ import static java.util.Objects.isNull;
 
 public class Pocitac {
 
-    private Procesor mujProcesor;
-    private Pamet mojePamet;
-    private Pamet ram;
-    private Disk mujDisk;
 
+    private Pamet ram;
+
+    public boolean jeZapnuty;
     private Disk pevnyDisk;
 
     private Procesor cpu;
@@ -18,7 +17,7 @@ public class Pocitac {
     public boolean isJeZapnuty() {
         return this.jeZapnuty;
     }
-    public void setCpu(Procesor procesor){
+    public void setProcesor(Procesor procesor){
         this.cpu=procesor;
     }
 
@@ -30,7 +29,7 @@ public class Pocitac {
     }
     public void zapniSe() {
         if (!jeZapnuty) {
-            if (this.mujProcesor==null||this.mojePamet==null ||this.mujDisk==null) {
+            if (this.ram==null||this.cpu==null ||this.pevnyDisk==null) {
                 System.err.println("Komponenty počítače se nenačetly.");
                 return;
             }
@@ -42,6 +41,8 @@ public class Pocitac {
 
     }
 
+
+
     public void vypniSe() {
         if (jeZapnuty) {
             vypniSe();
@@ -50,16 +51,15 @@ public class Pocitac {
         }
     }
 
-    public boolean jeZapnuty;
 
-    {
-        if (jeZapnuty) {
-            System.out.println("Počítač je zapnutý.");
-
-        } else {
-            System.out.println("Počítač je vypnutý.");
-
-        }
+    @Override
+    public String toString() {
+        return "Pocitac{" +
+                "ram=" + ram +
+                ", jeZapnuty=" + jeZapnuty +
+                ", pevnyDisk=" + pevnyDisk +
+                ", cpu=" + cpu +
+                '}';
     }
 }
 

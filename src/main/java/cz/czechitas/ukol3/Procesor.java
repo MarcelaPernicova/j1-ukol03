@@ -7,9 +7,7 @@ public class Procesor {
     public String getVyrobce() {
         return vyrobce;
     }
-    public String toString() {
-        return String.format("výrobce:, rychlost: Hz", this.vyrobce, this.rychlost);
-    }
+
     public void setVyrobce(String vyrobce) {
         this.vyrobce = vyrobce;
     }
@@ -23,4 +21,12 @@ public class Procesor {
     }
 
     private long rychlost = 5_300_000_000_000L;
+
+    @Override
+    public String toString() {
+        return "Procesor{" +
+                "vyrobce='" + vyrobce + '\'' +
+                ", rychlost=" + rychlost +
+                '}';
+    }
 }
