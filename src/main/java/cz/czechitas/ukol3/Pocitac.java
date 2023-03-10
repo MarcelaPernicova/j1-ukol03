@@ -29,12 +29,13 @@ public class Pocitac {
         this.ram=pamet;
     }
     public void zapniSe() {
-        if (jeZapnuty) {
+        if (!jeZapnuty) {
             if (this.mujProcesor==null||this.mojePamet==null ||this.mujDisk==null) {
                 System.err.println("Komponenty počítače se nenačetly.");
                 return;
             }
 
+            this.jeZapnuty=true;
             System.out.println("Počítač se zapnul.");
         } else {
             System.err.println("Počítač je už zapnutý.");
