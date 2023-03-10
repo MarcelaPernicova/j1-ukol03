@@ -34,7 +34,6 @@ public class Pocitac {
                 System.err.println("Komponenty počítače se nenačetly.");
                 return;
             }
-
             this.jeZapnuty=true;
             System.out.println("Počítač se zapnul.");
         } else {
