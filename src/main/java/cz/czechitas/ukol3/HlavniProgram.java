@@ -21,7 +21,7 @@ public class HlavniProgram {
 
         Disk marcinDisk = new Disk();
         marcinDisk.setKapacita(254_548_554_547L);
-        marcinDisk.setVyuziteMisto(125_256_458_230L);
+        marcinDisk.setVyuziteMisto(222_256_458_230L);
 
         Pamet marcinaPamet = new Pamet();
         marcinaPamet.setKapacita(8_000_000_000L);
@@ -41,8 +41,8 @@ public class HlavniProgram {
         System.out.println(marcinPocitac.toString());
 //        marcinPocitac.zapniSe();
 //        marcinPocitac.vypniSe();
-        marcinPocitac.vytvorSouborOVelikosti(422_545_254_457_578L);
-        marcinPocitac.smazSouborOVelikosti(988_989_999_587_568_512L);
+        marcinPocitac.vytvorSouborOVelikosti(254_457_578L);
+        marcinPocitac.smazSouborOVelikosti(988_589_999_587_568L);
 
 
         }
