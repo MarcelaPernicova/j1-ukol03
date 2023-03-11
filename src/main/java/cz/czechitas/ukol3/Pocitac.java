@@ -55,6 +55,14 @@ public class Pocitac {
         }
     }
 
+    public void smazSouborOVelikosti (long velikost){
+        if (jeZapnuty){
+            this.pevnyDisk.setVyuziteMisto(this.pevnyDisk.getVyuziteMisto() - velikost);
+            if (pevnyDisk.getVyuziteMisto() < 0){
+                pevnyDisk.setVyuziteMisto (0);
+            }
+        }
+    }
 
     public void vypniSe() {
         if (jeZapnuty) {

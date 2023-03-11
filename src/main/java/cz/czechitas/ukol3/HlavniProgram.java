@@ -42,6 +42,7 @@ public class HlavniProgram {
 //        marcinPocitac.zapniSe();
 //        marcinPocitac.vypniSe();
         marcinPocitac.vytvorSouborOVelikosti(422_545_254_457_578L);
+        marcinPocitac.smazSouborOVelikosti(988_989_999_587_568_512L);
 
 
         }
