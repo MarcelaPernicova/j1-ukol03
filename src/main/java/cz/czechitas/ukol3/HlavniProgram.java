@@ -5,9 +5,6 @@ package cz.czechitas.ukol3;
  */
 
 
-
-
-
 public class HlavniProgram {
 
     public static void main(String... args) {
@@ -36,16 +33,16 @@ public class HlavniProgram {
         marcinPocitac.setProcesor(marcinProcesor);
 
 
-
         marcinPocitac.zapniSe();
         System.out.println(marcinPocitac.toString());
-//        marcinPocitac.zapniSe();
-//        marcinPocitac.vypniSe();
         marcinPocitac.vytvorSouborOVelikosti(254_457_578L);
+        System.out.println(marcinPocitac.toString());
         marcinPocitac.smazSouborOVelikosti(988_589_999_587_568L);
+        System.out.println(marcinPocitac.toString());
 
-
-        }
+        marcinPocitac.vytvorSouborOVelikosti(254_548_554_548L);
+        System.out.println(marcinPocitac.toString());
     }
+}
 
 
