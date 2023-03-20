@@ -1,4 +1,4 @@
-package cz.czechitas.ukol3;
+package soucastiPocitace;
 
 
 

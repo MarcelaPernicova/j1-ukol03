@@ -1,6 +1,4 @@
-package cz.czechitas.ukol3;
-
-import static java.util.Objects.isNull;
+package soucastiPocitace;
 
 public class Pocitac {
 
@@ -45,10 +43,10 @@ public class Pocitac {
 
     public void vytvorSouborOVelikosti(long velikost) {
         if (jeZapnuty) {
-            this.pevnyDisk.setVyuziteMisto(this.pevnyDisk.getVyuziteMisto() + velikost);
-            if (pevnyDisk.getVyuziteMisto() > pevnyDisk.getKapacita()) {
+            long noveVyuziteMisto = pevnyDisk.getVyuziteMisto() + velikost;
+            if (noveVyuziteMisto > pevnyDisk.getKapacita()) {
                 System.err.println("Kapacita na disku je příliš malá.");
-                pevnyDisk.setVyuziteMisto(pevnyDisk.getVyuziteMisto() - velikost);
+                pevnyDisk.setVyuziteMisto(noveVyuziteMisto);
 
 
             }
@@ -57,8 +55,8 @@ public class Pocitac {
 
     public void smazSouborOVelikosti (long velikost){
         if (jeZapnuty){
-            this.pevnyDisk.setVyuziteMisto(this.pevnyDisk.getVyuziteMisto() - velikost);
-            if (pevnyDisk.getVyuziteMisto() < 0){
+            long noveUvolneneMisto = pevnyDisk.getVyuziteMisto() - velikost;
+            if (noveUvolneneMisto < 0){
                 pevnyDisk.setVyuziteMisto (0);
             }
         }
@@ -66,9 +64,8 @@ public class Pocitac {
 
     public void vypniSe() {
         if (jeZapnuty) {
+            jeZapnuty = false;
             System.out.println("Počítač se vypnul.");
-        } else {
-            System.err.println("Počítač je už vypnutý.");
         }
     }
 

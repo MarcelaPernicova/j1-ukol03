@@ -1,5 +1,10 @@
 package cz.czechitas.ukol3;
 
+import soucastiPocitace.Disk;
+import soucastiPocitace.Pamet;
+import soucastiPocitace.Pocitac;
+import soucastiPocitace.Procesor;
+
 /**
  * Spouštěcí třída celého programu
  */
@@ -33,6 +38,9 @@ public class HlavniProgram {
         marcinPocitac.setProcesor(marcinProcesor);
 
 
+        marcinPocitac.zapniSe();
+        marcinPocitac.vypniSe();
+        System.out.println(marcinPocitac.toString());
         marcinPocitac.zapniSe();
         System.out.println(marcinPocitac.toString());
         marcinPocitac.vytvorSouborOVelikosti(254_457_578L);
