@@ -45,8 +45,8 @@ public class Pocitac {
         if (jeZapnuty) {
             long noveVyuziteMisto = pevnyDisk.getVyuziteMisto() + velikost;
             if (noveVyuziteMisto > pevnyDisk.getKapacita()) {
-                System.err.println("Kapacita na disku je příliš malá.");
-                pevnyDisk.setVyuziteMisto(noveVyuziteMisto);
+                System.err.println("Kapacita na disku je příliš malá.");}
+               else { pevnyDisk.setVyuziteMisto(noveVyuziteMisto);
 
 
             }
@@ -57,7 +57,8 @@ public class Pocitac {
         if (jeZapnuty){
             long noveUvolneneMisto = pevnyDisk.getVyuziteMisto() - velikost;
             if (noveUvolneneMisto < 0){
-                pevnyDisk.setVyuziteMisto (0);
+                System.err.println("Kapacita na disku nesmí klesnout pod hodnotu 0");}
+               else { pevnyDisk.setVyuziteMisto(noveUvolneneMisto);
             }
         }
     }
